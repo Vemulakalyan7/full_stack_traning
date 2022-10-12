@@ -1,0 +1,15 @@
+head{
+    background-color: azure;
+}
+ul >li{
+    text-decoration: none;
+    display: inline-flex;
+    margin: 10px;
+}
+
+ul li:hover{
+    color: red;
+    background: green;
+}
+
+
