@@ -1,15 +1,32 @@
-head{
-    background-color: azure;
+.google-img{
+    position: relative;
+    bottom: -5px;
 }
-ul >li{
-    text-decoration: none;
+.menu{
+    list-style: none;
     display: inline-flex;
-    margin: 10px;
-}
+    position: relative;
+    bottom: 40px;
+    left: 150px;
 
-ul li:hover{
+}
+ul>li {
+    padding: 10px;
+}
+ul>li:hover{
     color: red;
-    background: green;
+    background-color: green ;
+    height: 20px;
+    
 }
-
-
+.coures-menu:hover .sub-menu{
+    display: block;
+}
+.sub-menu{
+    height: 110px;
+    width: 100px;
+    background-color: black;
+    color: brown;
+    list-style-type: none;
+    display: none;
+}
