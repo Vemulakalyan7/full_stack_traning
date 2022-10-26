@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var object={
+    salary:20000,
+     
+    getsalary:function(name,age) {
+        console.log(this.salary)
+        console.log(name,age)
+    },
+    
+    }
+    object.getsalary()
+    var emp = {
+        salary: 30000,
+    }
+    var emp1 = {
+        salary: 20000,
+    }
+    var emp2 = {
+        salary: 24000,
+    }
+
+    object.getsalary.call(emp, "sai", 23)
+    object.getsalary.apply(emp1, ["ram", 22])
+    ss = object.getsalary.bind(emp2, "raj", 24)
+    ss()
+        //console.log(user['name','age'])
+</script>
+
+<body>
+
+</body>
+
+</html>

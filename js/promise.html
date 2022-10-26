@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            p=new Promise(
+                function(sucess,fail){
+                let a=12
+                if (a>8){
+                    sucess('promise done')
+                } else{
+                    fail("promise fail")
+                }
+            })
+
+            console.log(p)
+            p.then(function(data){
+                console.log(data)
+            })
+            p.catch(function(errordata){
+                console.log(errordata)
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>higher order</title>
+</head>
+
+<body>
+    <script>
+        function first(fun) {
+            fun()
+            console.log(fun)
+        }
+        function second() {
+            console.log("this is second function")
+
+        }
+        first(second)
+
+        var arr = [12, 34, 57, 7]
+        function square(num) {
+            return num * num
+        }
+        function first(arr,operation) {
+            let result = []
+
+            for (ele of arr) {
+                let temp = operation(ele)
+                result.push(temp)
+
+            }
+            return result
+        }
+
+
+
+        let x = first(arr, square)
+        console.log(x)
+
+
+    </script>
+</body>
+
+</html>

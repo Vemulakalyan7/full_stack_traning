@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 2px solid goldenrod;
+        }
+    </style>
+    <title>CURD DEMO</title>
+</head>
+
+<body>
+    <form onsubmit="formdata()">
+        <label>firstname</label>
+        <input type="text" value="" id="fname" />
+        <label>lastname</label>
+        <input type="text" value="" id="lname" />
+        <label>age</label>
+        <input type="age" value="" id="age" />
+        <input type="submit" value="save" />
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+            </tr>
+            <tbody id="maindata">
+
+            </tbody>
+        </table>
+
+
+
+    </form>
+
+</body>
+<script>
+    function formdata() {
+        event.preventDefault();
+
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let age = document.getElementById("age").value;
+        console.log(fname, lname, age)
+
+        let tabledate = document.getElementById("maindata")
+        tabledate.innerHTML = tabledate.innerHTML + `
+       <tr>
+        <td>${fname}</td>
+        <td>${lname}</td>
+        <td>${age}</td>
+        <td> <button id="btn_edit" onclick="editdata()">edit</button></td>
+        <td> <button id="btn_delet" onclick="deletdata()">delet</button></td>
+
+        </tr>
+
+ `
+        reset()
+
+    }
+
+    function reset() {
+        document.getElementById("fname").value = ""
+        document.getElementById("lname").value = ""
+        document.getElementById("age").value = ""
+
+    }
+
+</script>
+
+</html>

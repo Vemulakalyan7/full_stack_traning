@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="demo.js"></script>
+    </head>
+    <body>
+<button type="button" id="output" onclick="table"> 
+  tables
+
+</button>
+<script>
+  
+  // call back function
+  function user(name,age,callback){
+    setTimeout(function(){
+      console.log(name,age)
+      s=(name,age)
+     callback()
+    },1000)
+  }
+  let result=user("kalyan",23,add)
+
+  function add(place){
+    console.log("hyd")
+  }
+
+  function first(greet,dis){
+    console.log(greet)
+    dis()
+
+     
+  }
+  first("hello", function second(){
+    console.log("world")
+  })
+
+
+ 
+
+  
+
+  
+
+</script>
+
+    </body>
+</html>
